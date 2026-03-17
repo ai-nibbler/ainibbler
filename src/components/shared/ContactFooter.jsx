@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Handshake, GraduationCap, User } from "lucide-react";
 
-const YOUTUBE_URL = "https://youtube.com";
-const TIKTOK_URL = "https://tiktok.com";
-const INSTAGRAM_URL = "https://instagram.com";
+const YOUTUBE_URL = "https://www.youtube.com/@tinkeringexe";
+const TIKTOK_URL = "https://www.tiktok.com/@chloetinkering";
+const INSTAGRAM_URL = "https://www.instagram.com/tinkering.exe";
+const SUBSTACK_URL = "https://substack.com/@tinkeringexe";
 
 const contactLinks = [
   {
