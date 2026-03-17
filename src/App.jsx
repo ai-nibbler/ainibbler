@@ -12,7 +12,6 @@ import AIAcademy from '@/pages/AIAcademy';
 import Newsletter from '@/pages/Newsletter';
 import Articles from '@/pages/Articles';
 import ProjectDetail from '@/pages/ProjectDetail';
-import AboutMe from '@/pages/AboutMe';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -48,7 +47,6 @@ const AuthenticatedApp = () => {
         <Route path="/Newsletter" element={<Newsletter />} />
         <Route path="/Articles" element={<Articles />} />
         <Route path="/Project/:slug" element={<ProjectDetail />} />
-        <Route path="/AboutMe" element={<AboutMe />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
