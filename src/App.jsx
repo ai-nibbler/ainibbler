@@ -40,7 +40,16 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
-      {/* Add your page Route elements here */}
+      <Route element={<AppLayout />}>
+        <Route path="/" element={<Navigate to="/Home" replace />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/FreeLesson" element={<FreeLesson />} />
+        <Route path="/AIAcademy" element={<AIAcademy />} />
+        <Route path="/Newsletter" element={<Newsletter />} />
+        <Route path="/Articles" element={<Articles />} />
+        <Route path="/Project/:slug" element={<ProjectDetail />} />
+        <Route path="/AboutMe" element={<AboutMe />} />
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
