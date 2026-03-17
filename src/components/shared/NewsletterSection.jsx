@@ -50,7 +50,7 @@ export default function NewsletterSection({ compact = false }) {
           </div>
 
           <div className="mt-6">
-            <a href="https://substack.com/@tinkeringexe" target="_blank" rel="noopener noreferrer">
+            <a href="https://ainibbler.substack.com/" target="_blank" rel="noopener noreferrer">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg px-6 transition-all duration-200">
                 <Mail className="w-4 h-4 mr-2" />
                 Sign up here

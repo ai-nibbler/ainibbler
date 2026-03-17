@@ -14,12 +14,6 @@ const contactLinks = [
     description: "Book a 1:1 tutoring session for your child",
     path: "#",
   },
-  {
-    emoji: "🙋‍♀️",
-    label: "About Me",
-    description: "Why I do what I do",
-    path: "/AboutMe",
-  },
 ];
 
 export default function ContactFooter() {
@@ -50,7 +44,7 @@ export default function ContactFooter() {
 
       <div className="flex items-center justify-between mt-10 pt-6 border-t border-border">
         <p className="text-xs text-muted-foreground">
-          © 2026 AI Literacy For Kids
+          © 2026
         </p>
         <div className="flex items-center gap-4">
           <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="YouTube">
