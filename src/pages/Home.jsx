@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
 import NewsletterSection from "@/components/shared/NewsletterSection";
 import ContactFooter from "@/components/shared/ContactFooter";
 
@@ -23,42 +22,66 @@ export default function Home() {
           <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground pt-1 w-24 flex-shrink-0 hidden sm:block">
             Hello
           </span>
-          <div className="flex-1">
+          <div className="flex-1 space-y-4">
             <p className="text-foreground leading-relaxed">
-              Hi, I'm Chloe.
+              Hi, I'm Chloe. As a lawyer by training, I started my career
+              helping big companies manage risks, while also working with
+              children as a tutor.
             </p>
-
-            <p className="text-foreground leading-relaxed mt-4">
-              As a lawyer by training, I started my career helping big companies
-              manage risks, while also working with children as a tutor.
-            </p>
-
-            <p className="text-foreground leading-relaxed mt-4">
-              Now, as AI becomes a big part of children's everyday life, I help
-              parents understand it in a simple and practical way — through{" "}
+            <p className="text-foreground leading-relaxed">
+              Now, as AI becomes part of children's everyday lives, I help
+              parents understand it in a simple, practical way — through{" "}
               <span className="text-primary font-semibold">
                 fun, hands-on projects
               </span>{" "}
-              you can do with your children.
+              you can do together. I believe it's important we raise children
+              who can think for themselves and use technology wisely.
             </p>
 
-            <p className="text-foreground leading-relaxed mt-4">
-              I believe AI education is important, so we can raise kids who can
-              think for themselves and use technology wisely.
+            <p className="text-sm text-muted-foreground font-medium">
+              ✨ No AI or tech experience needed — just curiosity
             </p>
+          </div>
+        </div>
+      </section>
 
-            <div className="flex flex-wrap gap-3 mt-5">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-medium">
-                🤔 No AI or tech experience needed, just curiosity
-              </span>
-            </div>
-
-            <div className="mt-6">
-              <Link to="/FreeLesson">
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg px-6 transition-all duration-200">
-                  🎨 Try a simple, free doodling game
+      {/* CTA Section */}
+      <section className="py-10 border-b border-border">
+        <div className="flex items-start gap-6">
+          <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground pt-1 w-24 flex-shrink-0 hidden sm:block">
+            Start Here
+          </span>
+          <div className="flex-1 flex flex-col sm:flex-row gap-4">
+            {/* Free Lesson */}
+            <div className="flex-1 p-5 rounded-xl border border-border bg-accent/30 flex flex-col gap-2">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">CTA</p>
+              <Link to="/FreeLesson" className="group">
+                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto rounded-lg px-5 transition-all duration-200">
+                  🎨 Start with a simple, free doodling game
                 </Button>
               </Link>
+            </div>
+
+            {/* Workshops */}
+            <div className="flex-1 p-5 rounded-xl border border-border bg-accent/30 flex flex-col gap-2">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Workshops</p>
+              <a
+                href="mailto:chloe@tinkering.exe"
+                className="inline-flex items-center gap-2 px-5 py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 text-sm font-semibold rounded-lg transition-colors duration-200 w-fit"
+              >
+                📚 Book a 1:1 tutoring session for your child
+              </a>
+            </div>
+
+            {/* Partnerships */}
+            <div className="flex-1 p-5 rounded-xl border border-border bg-accent/30 flex flex-col gap-2">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Partnerships</p>
+              <a
+                href="mailto:chloe@tinkering.exe"
+                className="inline-flex items-center gap-2 px-5 py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 text-sm font-semibold rounded-lg transition-colors duration-200 w-fit"
+              >
+                🤝 Sponsor a YouTube video or Substack post
+              </a>
             </div>
           </div>
         </div>
