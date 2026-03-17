@@ -21,9 +21,9 @@ export default function NewsletterSection({ compact = false }) {
         )}
         <div className="flex-1">
           <p className="text-foreground leading-relaxed">
-            Every week, I send you an{" "}
+            One easy idea each week to help your child understand AI,{" "}
             <span className="text-primary font-semibold italic">
-              actionable AI tip for your kids
+              one small step at a time
             </span>
             .
           </p>
