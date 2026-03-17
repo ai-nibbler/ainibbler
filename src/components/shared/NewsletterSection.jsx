@@ -1,27 +1,62 @@
 import React from "react";
+import { Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export default function NewsletterSection() {
+const SUBSTACK_URL = "https://substack.com";
+
+const featuredPosts = [
+  { title: "Coming Soon", label: "Featured Post #1" },
+  { title: "Coming Soon", label: "Featured Post #2" },
+  { title: "Coming Soon", label: "Featured Post #3" },
+];
+
+export default function NewsletterSection({ compact = false }) {
   return (
-    <section className="py-10">
+    <section className={compact ? "" : "py-10"}>
       <div className="flex items-start gap-6">
-        <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground pt-1 w-24 flex-shrink-0 hidden sm:block">
-          Newsletter
-        </span>
+        {!compact && (
+          <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground pt-1 w-24 flex-shrink-0 hidden sm:block">
+            Newsletter
+          </span>
+        )}
         <div className="flex-1">
           <p className="text-foreground leading-relaxed">
-            One easy idea each week to help your child understand AI, one small step at a time.
+            Every week, I send you an{" "}
+            <span className="text-primary font-semibold italic">
+              actionable AI tip for your kids
+            </span>
+            .
           </p>
-          <a
-            href="https://substack.com/@tinkeringexe"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-[#FF6719] hover:bg-[#e55a10] text-white text-sm font-semibold rounded-lg transition-colors duration-200"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
-            </svg>
-            Subscribe on Substack
-          </a>
+
+          <h3 className="text-xl font-bold text-foreground mt-6 mb-4">
+            Read it First
+          </h3>
+
+          <div className="space-y-3">
+            {featuredPosts.map((post, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-between gap-4"
+              >
+                <span className="text-primary/60 font-medium text-sm">
+                  {post.title}
+                </span>
+                <span className="flex-1 border-b border-dashed border-border" />
+                <span className="text-xs text-muted-foreground whitespace-nowrap">
+                  {post.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6">
+            <a href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg px-6 transition-all duration-200">
+                <Mail className="w-4 h-4 mr-2" />
+                Subscribe on Substack
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
