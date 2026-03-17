@@ -2,7 +2,7 @@ import React from "react";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const SUBSTACK_URL = "https://substack.com";
+const SUBSTACK_URL = "https://ainibbler.substack.com/";
 
 const featuredPosts = [
   { title: "Coming Soon", label: "Featured Post #1" },
