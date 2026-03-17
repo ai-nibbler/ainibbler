@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail, GraduationCap, Play } from "lucide-react";
-import ContactFooter from "@/components/shared/ContactFooter";
+import SocialFooter from "@/components/shared/SocialFooter";
 
 const SUBSTACK_URL = "https://ainibbler.substack.com/";
 const YOUTUBE_EMBED_URL = "https://www.youtube.com/embed/dQw4w9WgXcQ";
@@ -63,7 +63,7 @@ export default function FreeLesson() {
         </Link>
       </div>
 
-      <ContactFooter />
+      <SocialFooter />
     </div>
   );
 }

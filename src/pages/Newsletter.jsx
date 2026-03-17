@@ -1,6 +1,6 @@
 import React from "react";
 import NewsletterSection from "@/components/shared/NewsletterSection";
-import ContactFooter from "@/components/shared/ContactFooter";
+import SocialFooter from "@/components/shared/SocialFooter";
 
 export default function Newsletter() {
   return (
@@ -17,7 +17,7 @@ export default function Newsletter() {
         <NewsletterSection compact />
       </div>
 
-      <ContactFooter />
+      <SocialFooter />
     </div>
   );
 }

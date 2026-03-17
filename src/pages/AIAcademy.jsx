@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "@/components/shared/ProjectCard";
-import ContactFooter from "@/components/shared/ContactFooter";
+import SocialFooter from "@/components/shared/SocialFooter";
 
 const projects = [
   {
@@ -72,7 +72,7 @@ export default function AIAcademy() {
         ))}
       </div>
 
-      <ContactFooter />
+      <SocialFooter />
     </div>
   );
 }
