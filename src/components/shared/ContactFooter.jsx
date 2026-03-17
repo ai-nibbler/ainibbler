@@ -9,19 +9,13 @@ const SUBSTACK_URL = "https://substack.com/@tinkeringexe";
 
 const contactLinks = [
   {
-    icon: Handshake,
-    label: "Partnerships",
-    description: "Sponsor a YouTube video or Substack post",
-    path: "#",
-  },
-  {
-    icon: GraduationCap,
-    label: "Workshops",
+    emoji: "📚",
+    label: "Tutoring",
     description: "Book a 1:1 tutoring session for your child",
     path: "#",
   },
   {
-    icon: User,
+    emoji: "🙋‍♀️",
     label: "About Me",
     description: "Why I do what I do",
     path: "/AboutMe",
