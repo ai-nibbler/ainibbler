@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "@/components/shared/ProjectCard";
+import ContactFooter from "@/components/shared/ContactFooter";
 
 const projects = [
   {
@@ -70,6 +71,8 @@ export default function AIAcademy() {
           <ProjectCard key={i} project={project} />
         ))}
       </div>
+
+      <ContactFooter />
     </div>
   );
 }

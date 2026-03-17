@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, BookOpen, Mail, GraduationCap, Clock, Search, Menu, X } from "lucide-react";
+import { Home, Pencil, Mail, GraduationCap, Clock, Search, Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Home", path: "/Home", icon: Home },
-  { label: "Free AI Pictionary", path: "/FreeLesson", icon: BookOpen },
+  { label: "Free AI Doodling", path: "/FreeLesson", icon: Pencil },
   { label: "Newsletter", path: "/Newsletter", icon: Mail },
 ];
 

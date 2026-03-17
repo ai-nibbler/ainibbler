@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail, GraduationCap, Play } from "lucide-react";
+import ContactFooter from "@/components/shared/ContactFooter";
 
-const SUBSTACK_URL = "https://substack.com";
+const SUBSTACK_URL = "https://ainibbler.substack.com/";
 const YOUTUBE_EMBED_URL = "https://www.youtube.com/embed/dQw4w9WgXcQ";
 
 export default function FreeLesson() {
@@ -61,6 +62,8 @@ export default function FreeLesson() {
           </Button>
         </Link>
       </div>
+
+      <ContactFooter />
     </div>
   );
 }

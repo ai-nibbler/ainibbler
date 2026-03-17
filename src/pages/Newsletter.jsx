@@ -1,5 +1,6 @@
 import React from "react";
 import NewsletterSection from "@/components/shared/NewsletterSection";
+import ContactFooter from "@/components/shared/ContactFooter";
 
 export default function Newsletter() {
   return (
@@ -15,6 +16,8 @@ export default function Newsletter() {
       <div className="mt-8">
         <NewsletterSection compact />
       </div>
+
+      <ContactFooter />
     </div>
   );
 }
