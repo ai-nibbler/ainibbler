@@ -36,7 +36,7 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-3 mt-5">
               <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-medium">
-                ✨ No AI or tech experience needed — just curiosity
+                🎨 Start with a simple, free doodling game
               </span>
             </div>
 
