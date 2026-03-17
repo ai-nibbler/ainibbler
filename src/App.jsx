@@ -1,11 +1,18 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
-// Add page imports here
+import AppLayout from '@/components/layout/AppLayout';
+import Home from '@/pages/Home';
+import FreeLesson from '@/pages/FreeLesson';
+import AIAcademy from '@/pages/AIAcademy';
+import Newsletter from '@/pages/Newsletter';
+import Articles from '@/pages/Articles';
+import ProjectDetail from '@/pages/ProjectDetail';
+import AboutMe from '@/pages/AboutMe';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
