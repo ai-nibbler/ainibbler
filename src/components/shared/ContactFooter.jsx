@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const YOUTUBE_URL = "https://www.youtube.com/@tinkeringexe";
 const TIKTOK_URL = "https://www.tiktok.com/@chloetinkering";
 const INSTAGRAM_URL = "https://www.instagram.com/tinkering.exe";
-const SUBSTACK_URL = "https://substack.com/@tinkeringexe";
+const SUBSTACK_URL = "https://ainibbler.substack.com/";
 
 const contactLinks = [
   {

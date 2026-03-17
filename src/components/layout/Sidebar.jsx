@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, BookOpen, Mail, GraduationCap, Clock, FileText, Search, Menu, X, Pencil } from "lucide-react";
+import { Home, BookOpen, Mail, GraduationCap, Clock, Search, Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Home", path: "/Home", icon: Home },
@@ -11,10 +11,6 @@ const navItems = [
 const educationItems = [
   { label: "AI Academy For Kids", path: "/AIAcademy", icon: GraduationCap },
   { label: "Coming Soon", path: "#", icon: Clock, disabled: true },
-];
-
-const articleItems = [
-  { label: "AI", path: "/Articles", icon: FileText },
 ];
 
 export default function Sidebar() {
@@ -79,19 +75,11 @@ export default function Sidebar() {
           <NavLink key={item.label} item={item} />
         ))}
 
-        <div className="pt-4 pb-1 px-3">
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/60">
-            Articles
-          </span>
-        </div>
-        {articleItems.map((item) => (
-          <NavLink key={item.label} item={item} />
-        ))}
       </nav>
 
       <div className="px-4 py-4 border-t border-border">
         <p className="text-xs text-muted-foreground">
-          © AI Literacy For Kids {new Date().getFullYear()}
+          © 2026
         </p>
       </div>
     </div>

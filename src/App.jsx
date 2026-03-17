@@ -10,7 +10,6 @@ import Home from '@/pages/Home';
 import FreeLesson from '@/pages/FreeLesson';
 import AIAcademy from '@/pages/AIAcademy';
 import Newsletter from '@/pages/Newsletter';
-import Articles from '@/pages/Articles';
 import ProjectDetail from '@/pages/ProjectDetail';
 
 const AuthenticatedApp = () => {
@@ -45,7 +44,6 @@ const AuthenticatedApp = () => {
         <Route path="/FreeLesson" element={<FreeLesson />} />
         <Route path="/AIAcademy" element={<AIAcademy />} />
         <Route path="/Newsletter" element={<Newsletter />} />
-        <Route path="/Articles" element={<Articles />} />
         <Route path="/Project/:slug" element={<ProjectDetail />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
