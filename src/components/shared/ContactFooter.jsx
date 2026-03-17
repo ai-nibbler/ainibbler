@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const YOUTUBE_URL = "https://www.youtube.com/@tinkeringexe";
-const TIKTOK_URL = "https://www.tiktok.com/@chloetinkering";
-const INSTAGRAM_URL = "https://www.instagram.com/tinkering.exe";
+const YOUTUBE_URL = "https://www.youtube.com/@ainibbler";
+const TIKTOK_URL = "https://www.tiktok.com/@ainibbler";
+const INSTAGRAM_URL = "http://instagram.com/ainibbler";
 const SUBSTACK_URL = "https://ainibbler.substack.com/";
 
 const contactLinks = [
