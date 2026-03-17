@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, BookOpen, Mail, GraduationCap, Clock, FileText, Search, Menu, X } from "lucide-react";
+import { Home, BookOpen, Mail, GraduationCap, Clock, FileText, Search, Menu, X, Pencil } from "lucide-react";
 
 const navItems = [
   { label: "Home", path: "/Home", icon: Home },

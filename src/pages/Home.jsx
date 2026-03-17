@@ -25,7 +25,7 @@ export default function Home() {
           </span>
           <div className="flex-1">
             <p className="text-foreground leading-relaxed">
-              Hi, I'm Chloe. As a lawyer by training, I started my career helping big companies manage risks, while also working with children as a tutor.
+              Hi, I'm Chloe. As a lawyer by training, I started my career helping companies manage risks, while also working with children as a tutor.
             </p>
 
             <p className="text-foreground leading-relaxed mt-4">
