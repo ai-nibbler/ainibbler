@@ -29,7 +29,7 @@ export default function NewsletterSection({ compact = false }) {
           </p>
 
           <h3 className="text-xl font-bold text-foreground mt-6 mb-4">
-            Read it First
+            My Favorite Posts
           </h3>
 
           <div className="space-y-3">

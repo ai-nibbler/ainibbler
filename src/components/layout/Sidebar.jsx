@@ -4,7 +4,7 @@ import { Home, BookOpen, Mail, GraduationCap, Clock, FileText, Search, Menu, X }
 
 const navItems = [
   { label: "Home", path: "/Home", icon: Home },
-  { label: "Try a Free AI Lesson", path: "/FreeLesson", icon: BookOpen },
+  { label: "🎨 Start with a free doodling game", path: "/FreeLesson", icon: null },
   { label: "Newsletter", path: "/Newsletter", icon: Mail },
 ];
 

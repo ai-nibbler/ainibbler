@@ -10,18 +10,12 @@ export default function FreeLesson() {
   return (
     <div>
       <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
-        Try a Free AI Lesson
+        🎨 Start with a simple, free doodling game
       </h1>
 
       <div className="mt-6 space-y-4 text-foreground leading-relaxed">
-        <p>
-          This lesson is designed so parents can watch with their child — or
-          kids can explore independently (ages 8–12).
-        </p>
-        <p>
-          No downloads. No sign-ups. Just a simple, fun introduction to how AI
-          works.
-        </p>
+        <p>Draw, guess, and see how AI thinks.</p>
+        <p>A fun first activity for kids (8–11) — no setup needed.</p>
       </div>
 
       {/* Lesson Card */}

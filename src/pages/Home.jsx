@@ -36,15 +36,14 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-3 mt-5">
               <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-medium">
-                🎨 Start with a simple, free doodling game
+                ✨ No AI or tech experience needed — just curiosity
               </span>
             </div>
 
             <div className="mt-6">
               <Link to="/FreeLesson">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg px-6 transition-all duration-200">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  Try a Free AI Lesson
+                  🎨 Start with a simple, free doodling game
                 </Button>
               </Link>
             </div>

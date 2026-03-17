@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Handshake, GraduationCap, User } from "lucide-react";
+
 
 const YOUTUBE_URL = "https://www.youtube.com/@tinkeringexe";
 const TIKTOK_URL = "https://www.tiktok.com/@chloetinkering";
@@ -36,7 +36,7 @@ export default function ContactFooter() {
                 to={item.path}
                 className="flex items-center gap-2 text-primary hover:text-primary/80 font-medium text-sm transition-colors"
               >
-                <item.icon className="w-4 h-4" />
+                <span>{item.emoji}</span>
                 {item.label}
               </Link>
               <span className="flex-1 border-b border-dashed border-border" />
