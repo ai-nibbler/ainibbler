@@ -35,7 +35,7 @@ export default function Sidebar() {
           : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
       }`}
     >
-      <item.icon className="w-4 h-4 flex-shrink-0" />
+      {item.icon && <item.icon className="w-4 h-4 flex-shrink-0" />}
       <span>{item.label}</span>
     </Link>
   );
