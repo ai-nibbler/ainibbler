@@ -35,7 +35,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap gap-3 mt-5">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-medium">
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent text-accent-foreground text-sm font-medium">
                 ✨ No AI or tech experience needed — just curiosity
               </span>
             </div>
