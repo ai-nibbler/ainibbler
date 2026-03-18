@@ -21,11 +21,7 @@ export default function NewsletterSection({ compact = false }) {
         }
         <div className="flex-1">
           <p className="text-foreground leading-relaxed">
-            One easy idea each week to help your child understand AI,{" "}
-            <span className="text-primary font-semibold italic">
-              one small step at a time
-            </span>
-            .
+            <span className="text-primary font-semibold">One easy idea</span> each week to help your child <span className="text-primary font-semibold">understand AI</span>, one small step at a time.
           </p>
 
           <h3 className="text-xl font-bold text-foreground mt-6 mb-4">Favorite Posts
