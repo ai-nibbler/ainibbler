@@ -35,13 +35,13 @@ Pushing to `main` runs **Deploy to GitHub Pages** (see `.github/workflows/deploy
 
 ### Required: use the Actions build (fixes a blank site)
 
-If **ainibbler.com** (or your domain) shows a **white / blank page**, the live site is probably serving the **wrong** `index.html` (the repo root file still points at `/src/main.jsx`, which only works with `npm run dev`).
+If your custom domain (e.g. **anibbler.com**) shows a **white / blank page**, the live site is probably serving the **wrong** `index.html` (the repo root file still points at `/src/main.jsx`, which only works with `npm run dev`).
 
 1. On GitHub: **Settings → Pages → Build and deployment**.
 2. Set **Source** to **GitHub Actions** — **not** “Deploy from a branch”.
 3. Open the **Actions** tab → run **Deploy to GitHub Pages** (or push to `main`). Wait until it’s green.
 4. The first deploy may ask you to **approve** the `github-pages` environment (review and approve in the workflow run).
-5. **Settings → Pages → Custom domain:** must match **`public/CNAME`** exactly (e.g. `ainibbler.com`). DNS at your registrar should follow [GitHub’s custom domain docs](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site).
+5. **Settings → Pages → Custom domain:** must match **`public/CNAME`** exactly (this repo uses **anibbler.com**). DNS at your registrar should follow [GitHub’s custom domain docs](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 After a correct deploy, **View Page Source** on the live site should show a script tag like **`/assets/index-….js`**, not **`/src/main.jsx`**.
 
