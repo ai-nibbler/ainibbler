@@ -1,9 +1,27 @@
 import base44 from "@base44/vite-plugin"
 import react from '@vitejs/plugin-react'
+import { copyFileSync, existsSync } from 'node:fs'
+import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
+
+/** GitHub Pages serves 404.html for unknown paths so React Router can handle deep links. */
+function githubPagesSpaFallback() {
+  return {
+    name: 'github-pages-spa-fallback',
+    closeBundle() {
+      const indexHtml = resolve(__dirname, 'dist/index.html')
+      const notFoundHtml = resolve(__dirname, 'dist/404.html')
+      if (existsSync(indexHtml)) copyFileSync(indexHtml, notFoundHtml)
+    },
+  }
+}
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/',
   logLevel: 'error', // Suppress warnings, only show errors
   // Dedicated port so this app is not confused with other Vite projects (e.g. ai-project-pantry on 5173).
   server: {
@@ -22,5 +40,6 @@ export default defineConfig({
       visualEditAgent: true
     }),
     react(),
+    githubPagesSpaFallback(),
   ]
 });
