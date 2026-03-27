@@ -5,6 +5,12 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   logLevel: 'error', // Suppress warnings, only show errors
+  // Dedicated port so this app is not confused with other Vite projects (e.g. ai-project-pantry on 5173).
+  server: {
+    port: 5180,
+    // Listen on IPv4 + IPv6; default [::1]-only breaks http://localhost when it resolves to 127.0.0.1
+    host: true,
+  },
   plugins: [
     base44({
       // Support for legacy code that imports the base44 SDK with @/integrations, @/entities, etc.

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Pencil, Mail, GraduationCap, Clock, Search, Menu, X } from "lucide-react";
+import { Home, Pencil, Mail, Cookie, Clock, Search, Menu, X } from "lucide-react";
+import { AI_PROJECT_PANTRY_URL } from "@/constants/aiProjectPantry";
 
 const navItems = [
   { label: "Home", path: "/Home", icon: Home },
@@ -9,7 +10,13 @@ const navItems = [
 ];
 
 const educationItems = [
-  { label: "AI Academy For Kids", path: "/AIAcademy", icon: GraduationCap },
+  {
+    label: "AI Project Pantry",
+    sublabel: "Snackable 15‑Min Projects for Families",
+    href: AI_PROJECT_PANTRY_URL,
+    external: true,
+    icon: Cookie,
+  },
   { label: "Coming Soon", path: "#", icon: Clock, disabled: true },
 ];
 
@@ -19,22 +26,67 @@ export default function Sidebar() {
 
   const isActive = (path) => location.pathname === path;
 
-  const NavLink = ({ item }) => (
-    <Link
-      to={item.disabled ? "#" : item.path}
-      onClick={() => setMobileOpen(false)}
-      className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
-        item.disabled
-          ? "text-muted-foreground/50 cursor-default"
-          : isActive(item.path)
-          ? "bg-accent text-accent-foreground font-semibold"
-          : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
-      }`}
-    >
-      {item.icon && <item.icon className="w-4 h-4 flex-shrink-0" />}
-      <span>{item.label}</span>
-    </Link>
+  const navItemActive = (item) => {
+    if (item.disabled || item.external) return false;
+    return isActive(item.path);
+  };
+
+  const navLinkClass = (active, disabled) =>
+    `flex items-start gap-3 px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
+      disabled
+        ? "text-muted-foreground/50 cursor-default"
+        : active
+        ? "bg-accent text-accent-foreground font-semibold"
+        : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
+    }`;
+
+  const NavLinkBody = ({ item, active }) => (
+    <>
+      {item.icon && (
+        <item.icon className="w-4 h-4 flex-shrink-0 mt-0.5" />
+      )}
+      {item.sublabel ? (
+        <span className="flex flex-col gap-0.5 min-w-0 leading-tight">
+          <span className="font-semibold">{item.label}</span>
+          <span
+            className={
+              active
+                ? "text-[11px] font-normal text-accent-foreground/80"
+                : "text-[11px] font-normal text-muted-foreground/90"
+            }
+          >
+            {item.sublabel}
+          </span>
+        </span>
+      ) : (
+        <span>{item.label}</span>
+      )}
+    </>
   );
+
+  const NavLink = ({ item }) => {
+    const active = navItemActive(item);
+    if (item.external && item.href) {
+      return (
+        <a
+          href={item.href}
+          onClick={() => setMobileOpen(false)}
+          className={navLinkClass(false, false)}
+        >
+          <NavLinkBody item={item} active={false} />
+        </a>
+      );
+    }
+    return (
+      <Link
+        to={item.disabled ? "#" : item.path}
+        onClick={() => setMobileOpen(false)}
+        className={navLinkClass(active, item.disabled)}
+      >
+        <NavLinkBody item={item} active={active} />
+      </Link>
+    );
+  };
 
   const SidebarContent = () => (
     <div className="flex flex-col h-full">

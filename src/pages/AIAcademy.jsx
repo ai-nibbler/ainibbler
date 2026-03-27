@@ -1,5 +1,7 @@
 import React from "react";
+import { Cookie } from "lucide-react";
 import ProjectCard from "@/components/shared/ProjectCard";
+import { AI_PROJECT_PANTRY_URL } from "@/constants/aiProjectPantry";
 import SocialFooter from "@/components/shared/SocialFooter";
 
 const projects = [
@@ -57,8 +59,22 @@ const projects = [
 export default function AIAcademy() {
   return (
     <div>
-      <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
-        AI Academy For Kids
+      <h1 className="flex flex-col gap-1 m-0">
+        <span className="flex items-center gap-3 text-2xl sm:text-3xl font-bold text-foreground">
+          <Cookie
+            className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 text-primary"
+            aria-hidden
+          />
+          <a
+            href={AI_PROJECT_PANTRY_URL}
+            className="leading-tight text-foreground hover:underline underline-offset-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:rounded-sm"
+          >
+            AI Project Pantry
+          </a>
+        </span>
+        <span className="block text-sm sm:text-base text-muted-foreground font-normal pl-11 sm:pl-[3.25rem] leading-snug">
+          Snackable 15‑Min Projects for Families
+        </span>
       </h1>
       <p className="text-muted-foreground mt-2 leading-relaxed">
         A curated collection of hands-on AI projects designed for curious minds

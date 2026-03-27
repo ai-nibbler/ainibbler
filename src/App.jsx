@@ -29,9 +29,15 @@ const AuthenticatedApp = () => {
     if (authError.type === 'user_not_registered') {
       return <UserNotRegisteredError />;
     } else if (authError.type === 'auth_required') {
-      // Redirect to login automatically
       navigateToLogin();
-      return null;
+      return (
+        <div className="fixed inset-0 flex flex-col items-center justify-center gap-3 p-8 text-center bg-background">
+          <p className="text-foreground font-medium">Redirecting to sign in…</p>
+          <p className="text-sm text-muted-foreground max-w-md">
+            If this page stays blank, check pop-up blockers or your Base44 app configuration.
+          </p>
+        </div>
+      );
     }
   }
 
