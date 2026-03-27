@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Pencil, Mail, Cookie, Clock, Search, Menu, X } from "lucide-react";
-import { AI_PROJECT_PANTRY_URL } from "@/constants/aiProjectPantry";
+import { AI_PROJECT_PANTRY_URL } from "@/config/aiProjectPantry";
 
 const navItems = [
   { label: "Home", path: "/Home", icon: Home },

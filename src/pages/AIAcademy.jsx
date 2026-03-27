@@ -1,7 +1,7 @@
 import React from "react";
 import { Cookie } from "lucide-react";
 import ProjectCard from "@/components/shared/ProjectCard";
-import { AI_PROJECT_PANTRY_URL } from "@/constants/aiProjectPantry";
+import { AI_PROJECT_PANTRY_URL } from "@/config/aiProjectPantry";
 import SocialFooter from "@/components/shared/SocialFooter";
 
 const projects = [

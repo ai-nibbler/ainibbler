@@ -1,6 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 
-export default function PageNotFound() {
+/**
+ * Full-page 404 (outside main layout). Shown for unknown routes.
+ */
+export default function NotFoundPage() {
   const location = useLocation();
   const pageName = location.pathname.replace(/^\//, '') || '(root)';
 
