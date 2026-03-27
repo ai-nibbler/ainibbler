@@ -1,39 +1,29 @@
-**Welcome to your Base44 project** 
+# AI Nibbler (`ainibbler-home`)
 
-**About**
+Vite + React site. Run it locally or deploy the production build (for example with GitHub Pages via the included workflow).
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+## Local development
 
-This project contains everything you need to run your app locally.
+1. Clone the repository and open this directory.
+2. Install dependencies: `npm install`
+3. Optional: create **`.env.local`** (do not commit it) if you need a non-default pantry link:
 
-**Edit the code in your local development environment**
-
-Any change pushed to the repo will also be reflected in the Base44 Builder.
-
-**Prerequisites:** 
-
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
-
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
-
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
+```env
+VITE_AI_PROJECT_PANTRY_URL=YOUR_PANTRY_PUBLIC_SITE_URL
 ```
 
-Run the app: `npm run dev`
+4. Start the dev server: `npm run dev`
 
-**Publish your changes**
+## Production build
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+```bash
+npm run build
+```
 
-**Docs & Support**
+Output is in `dist/`. Preview locally with `npm run preview`.
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+## GitHub Pages
 
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+Pushing to `main` runs **Deploy to GitHub Pages** (see `.github/workflows/deploy-github-pages.yml`). Configure the **Pages** source to **GitHub Actions** in the repository settings.
+
+Optional: set repository secret **`VITE_AI_PROJECT_PANTRY_URL`** to your deployed pantry site URL so the sidebar / links resolve in production. Custom domains are set under **Pages** → **Custom domain**.

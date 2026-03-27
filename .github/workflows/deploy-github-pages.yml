@@ -3,8 +3,8 @@
 # After merge: Repo → Settings → Pages → Build and deployment → Source: GitHub Actions
 # (not “Deploy from a branch”). Custom domain stays under Pages → Custom domain.
 #
-# Optional repo secrets for build-time env (Settings → Secrets → Actions):
-#   VITE_BASE44_APP_ID, VITE_BASE44_APP_BASE_URL, VITE_AI_PROJECT_PANTRY_URL
+# Optional repo secret (Settings → Secrets → Actions):
+#   VITE_AI_PROJECT_PANTRY_URL — public URL of the AI Project Pantry site (no secrets in repo).
 name: Deploy to GitHub Pages
 
 on:
@@ -35,8 +35,6 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          VITE_BASE44_APP_ID: ${{ secrets.VITE_BASE44_APP_ID }}
-          VITE_BASE44_APP_BASE_URL: ${{ secrets.VITE_BASE44_APP_BASE_URL }}
           VITE_AI_PROJECT_PANTRY_URL: ${{ secrets.VITE_AI_PROJECT_PANTRY_URL }}
 
       - uses: actions/upload-pages-artifact@v3

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { BookOpen } from "lucide-react";
 import NewsletterSection from "@/components/shared/NewsletterSection";
 import ContactFooter from "@/components/shared/ContactFooter";
 
