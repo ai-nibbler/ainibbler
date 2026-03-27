@@ -35,15 +35,22 @@ Pushing to `main` runs **Deploy to GitHub Pages** (see `.github/workflows/deploy
 
 ### Required: use the Actions build (fixes a blank site)
 
-If your custom domain (e.g. **anibbler.com**) shows a **white / blank page**, the live site is probably serving the **wrong** `index.html` (the repo root file still points at `/src/main.jsx`, which only works with `npm run dev`).
+If your custom domain (e.g. **ainibbler.com**) shows a **white / blank page**, the live site is probably serving the **wrong** `index.html` (the repo root file still points at `/src/main.jsx`, which only works with `npm run dev`).
 
 1. On GitHub: **Settings → Pages → Build and deployment**.
 2. Set **Source** to **GitHub Actions** — **not** “Deploy from a branch”.
 3. Open the **Actions** tab → run **Deploy to GitHub Pages** (or push to `main`). Wait until it’s green.
 4. The first deploy may ask you to **approve** the `github-pages` environment (review and approve in the workflow run).
-5. **Settings → Pages → Custom domain:** must match **`public/CNAME`** exactly (this repo uses **anibbler.com**). DNS at your registrar should follow [GitHub’s custom domain docs](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site).
+5. **Settings → Pages → Custom domain:** must match **`public/CNAME`** exactly (this repo uses **ainibbler.com**). DNS at your registrar should follow [GitHub’s custom domain docs](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
-After a correct deploy, **View Page Source** on the live site should show a script tag like **`/assets/index-….js`**, not **`/src/main.jsx`**.
+After a correct deploy, **View Page Source** on the live site should show a script tag like **`./assets/index-….js`** (relative), not **`/src/main.jsx`**. The build uses **relative** asset URLs on purpose so **`https://ai-nibbler.github.io/ainibbler/`** and your **custom domain** both load scripts from the right path (absolute `/assets/…` only works at the site root and leaves the default **github.io/repo** URL blank).
+
+### Works on my computer but 404 on another device (or “GitHub 404”)
+
+- **Local dev is not the same as the public site.** Other devices use **DNS** and **GitHub Pages**, not your `npm run dev` server.
+- **Hosts file:** If you added a line like `127.0.0.1 ainibbler.com`, only that PC will open your local app when you type the domain. Remove it (or comment it out) when you want to test the real live site; on other machines you never had that override, so they hit GitHub — which returns **404** until the custom domain and DNS are set correctly.
+- **Spelling:** The hostname must be identical everywhere: registrar DNS, **GitHub → Pages → Custom domain**, and **`public/CNAME`** (e.g. **ainibbler.com** vs **anibbler.com** are different sites).
+- **Sanity check:** If **`https://ai-nibbler.github.io/ainibbler/`** loads but the custom domain does not, the deploy is fine; fix **custom domain + DNS** on GitHub and at your registrar.
 
 Optional: set repository secret **`VITE_AI_PROJECT_PANTRY_URL`** to your deployed pantry site URL so the sidebar / links resolve in production.
 

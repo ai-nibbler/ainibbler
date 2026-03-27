@@ -19,8 +19,12 @@ function githubPagesSpaFallback() {
 }
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: '/',
+// Production uses relative asset URLs so the same build works at:
+// - https://ai-nibbler.github.io/ainibbler/  (project Pages)
+// - https://ainibbler.com/                    (custom domain at site root)
+// Dev server keeps base "/" for normal local URLs.
+export default defineConfig(({ command }) => ({
+  base: command === 'serve' ? '/' : './',
   logLevel: 'error',
   resolve: {
     alias: {
@@ -36,4 +40,4 @@ export default defineConfig({
     host: true,
   },
   plugins: [react(), githubPagesSpaFallback()],
-})
+}))

@@ -3,6 +3,11 @@
 # After merge: Repo → Settings → Pages → Build and deployment → Source: GitHub Actions
 # (not “Deploy from a branch”). Custom domain stays under Pages → Custom domain.
 #
+# Project URL pattern: https://<owner>.github.io/<repo>/
+# Example: owner ai-nibbler + repo ainibbler → https://ai-nibbler.github.io/ainibbler/
+# If that URL shows “There isn’t a GitHub Pages site here”, Pages isn’t published yet:
+# enable Source: GitHub Actions, push main (or Run workflow), approve github-pages if asked.
+#
 # Optional repo secret (Settings → Secrets → Actions):
 #   VITE_AI_PROJECT_PANTRY_URL — public URL of the AI Project Pantry site (no secrets in repo).
 name: Deploy to GitHub Pages
